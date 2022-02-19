@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>JavaScript</title>
+</head>
+<body>
+<h1>VARIABLES (espacio que guardamos en memoria)</h1>
+    <h5>String (cadena de texto, se puede usar " ' ``)</h5>
+        <p>string = "cadena de texto"</p>
+    <h5>Number (es un nro, no va entre comillas)</h5>
+        <p>number = 19</p>
+    <h5>Booleano (son 2: 0 y 1, pero es traduce como true o false)</h5>
+        <p>booleano = false</p>
+
+<h3>Formas de declarar VARIABLES</h3>
+    <h4>Let</h4>
+        <p>Limita el alcance de la variable al bloque en el que lo ejecutamos. Se puede definir de diferentes formas: let numero1 = 15, numero3 = 11. Separando por comas</p>
+        <p style="color: green;">let numero = 29; //inicialización</p>
+        <p style="color: blueviolet;">numero = 23; //modifique</p>
+        <p style="color: red;">alert (numero)</p>
+    <h4>Var (su  alcance es global)</h4>
+    <h4>Const </h4>
+        <p>Constante, la unica que no se puede cambiar su valor. Ej: numero PI, ya que nunca cambia. No se puede declarar y despúes inicializar, sino Inicializar cuando se declara.</p>
+        <p style="color: green;">const pi = "3.14";</p>
+        <p style="color: red;">alert (pi)</p>
+
+<h3>UNDEFINED, NULL, NAN</h3>
+<ul>
+    <li>Undefined: Variable no está definida. No tiene ningun valor.</li>
+    <li>Null: Variable vacía  pero intencionalmente. Tiene un valor, pero ese valor es que no tiene valor. Vacia, nula, no tiene valor.</li>
+        <p style="color: green;">let numero = null</p>
+    <li>Nan: Not a Number (no es un número)</li>
+        <p style="color: green;">let numero =5 <br> let numero2 ="pedro"</p>
+        <p style="color: red;">alert (numero * numero2)</p>
+        <p style="color: blue;">Resultado: NaN. Si uso + concatena. Pero en este caso no pudo realizar la operación.</p>
+</ul>
+
+<h1>PROMPT</h1>
+    <p>Forma de pedir datos. Se guarda usando las variables.</p>
+    <p style="color: green;">prompt('Escribe tu nombre')</p>
+    <p style="color: blueviolet;">let nombre = prompt("decime tu nombre") //Forma de guardar <br> alert(nombre) <br> alert("Hola " + nombre)</p>
+
+<h1>OPERADORES</h1>
+    <a href="https://3con14.biz/js/conceptos/12-operadores-en-javascript.html" target="_blank">Más información</a>
+    <h4>Operadores de Asignación</h4>
+        <p>Un operador de asignación asigna un valor al operando de la izquierda basado en el valor del operando de la derecha.</p>
+        <p style="color: green;">let numero = 10; <br> numero += 5;  //Le estoy sumando 5, es igual a: numero = numero + 5</p>
+        <p style="color: red;">document.write(numero)</p>
+        <img src="./img/op asignacion.jpg" alt="" style="width: 500px;">
+    <h4>Operadores Aritméticos</h4>
+        <p>Los operadores Aritméticos toman valores numéricos (ya sean literales o variables) como sus operandos y retornan un valor numérico único.</p>
+        <img src="./img/op aritmetico.jpg" alt="" style="width: 500px;">
+
+<h1>CONCATENACIÓN</h1>
+    <p style="color: green;">numero1 = 53; <br> numero2 = 8</p>
+    <p style="color: blueviolet;">frase = "Hola" + numero1 + numero2</p>
+    <p style="color: red;">document.write(frase). Resultado: Hola538</p>
+    <p>Otra forma de realizar la concatenación es con ${}``. Cuando String detecta texto convierte todo en texto. Si a la frase le sacamos "Hola" el resultado seria: 61.</p>
+    <p style="color: green;">nombre = Pedro;</p>
+    <p style="color: blueviolet;">frase = `Soy ${nombre} y estoy caminando`;</p>
+    <p style="color: red;">document.write(frase). Resultado: Soy Pedro y estoy caminando</p>
+
+<h1>OPERADORES</h1>
+<h4>Operadores de comparación</h4>
+    <p>Los operadores de comparación comparan dos expresiones y devuelven un valor Boolean (true o false) que representa la realción de sus valores. Funciona con número y texto.</p>
+    <p style="color: green;">let numero = 23 <br> let numero2 = 13</p>
+    <p style="color: red;">document.write(numero == numero2). Resultado: false</p>
+    <p>El = solo asigna. Para comprar usamos ==. Para ver si es exactamente idéntico, usamos === (mismo tipo de dato y valor).</p>
+    <p>Lo mismo sucede con != y !==</p>
+    <p style="color: green;">let numero = 23 <br> let texto = "23"</p>
+    <p style="color: red;">document.write(numero == texto). Resultado: true</p>
+    <p style="color: red;">document.write(numero === texto). Resultado: false</p>
+    <img src="./img/op comparacion.jpg" alt="" style="width: 500px;">
+<h4>Operadores Lógicos</h4>
+    <p>Los operadores lógicos nos devuelven un resultado a partir de que se cumpla (o no) una condición, su resultado es booleano, y sus operandos son valores lógicos o asimilables a ellos.</p>
+    <img src="./img/op logicos.jpg" alt="" style="width: 500px;">
+    <p>&&</p>
+        <ul>
+            <li>Ambas verdaderas: true</li>
+            <li>Una verdadera y una falsa: false (no importa ubicación)</li>
+            <li>Ambas falsas: false</li>
+        </ul>
+    <p>||</p>
+        <ul>
+            <li>Una verdadera y una falsa: true</li>
+            <li>Ambas falsas: false</li>
+        </ul>
+    <p>!: Regresa lo contrario de lo que le devuelvo</p>
+    <ul>
+        <li>Si es verdadero: falso</li>
+        <li>Si es falso: true</li>
+    </ul>
+    <p>Ejemplo:</p>
+    <p style="color: green;">num1 = 12 <br>num2 = 24 <br>num3 = 25 <br>num4 = 92 <br>num5 = 91</p>
+    <p style="color: blueviolet;">op= (num1 < num2 || num2 < num3) && (!(num1 != num2) && num5 != num3);</p>
+    <p style="color: rgb(235, 121, 219);">op= (true || true)) && (!true && true); <br> op= (true || true)) && (false && true); <br> op= (true) && (false);</p>
+    <p style="color: red;">document.write(op). Resultado: false. Primero separa en términos, luego realiza &&</p>
+
+<h1>CONDICIONALES</h1>
+    <p>Es una sentencia que nos permite validar algo. Los bloques se ejecutan si la condición se cumple. <br> Ejemplo:</p> 
+    <p style="color: green;">if (10 < 15){<br>alert("hola")<br>}</p>
+    <p style="color: red;">En este caso, el alert, se ejecutaría.</p>
+    <p style="color: green;">nombre = "Laura" <br> if (nombre == "Pedro"){<br>alert("hola");<br>}</p>
+    <p style="color: red;">En este caso, el alert, no se ejecutaría.</p>
+    <p>ELSE IF: Si lo anterior no se cumple, podemos agregar otra condición. Se puede repetir cuantas veces querramos.</p>
+    <p style="color: green;">nombre = "marta"<br>if (nombre == "sofia") {<br>alert ("tu nombre es lindo");<br>} else if (nombre == "marta"){<br>alert ("tu nombre es feo");<br>}</p>
+    <p>ELSE: sin condición</p>
+    <p style="color: green;">else {<br>alert("tu nombre es otro");<br>}</p>
+
+    <p style="background-color: cyan; font-weight: bolder;">parseInt: convierte la cadena de texto en un número.</p>
+
+<h1>ARRAYS</h1>
+    <p>El tipo de los elementos de un array son variables. El array ya no es un dato primitivo sino un objeto. En las variables podemos guardar un dato, en el array podemos guardad muchos datos. Se utiliza [] y se separa por ,. Ejemplo: <br>let frutas = ["banana", "manzana", "pera"];</p>
+    <p>Las posiciones arrancan desde 0. <br> document.write(fruta[1]) Resultado: Manzana</p>
+<h4>ARRAYS ASOCIATIVOS</h4>
+    <p>Un array con valor asociado. Las posiciones tienen un nombre.</p>
+    <p style="color: green;">let pc1 = {<br>nombre: "SofiaPC"<br>procesador: "Intel Core I7"<br>ram: "16GB"<br>espacio: "1TB"<br>};</p>
+    <p style="color: red;">document.write(pc1["nombre"]) Resultado: SofiaPC</p>
+<h1>BUCLES E INTERACIÓN</h1>
+<h4>While</h4>
+    <p>A diferencia con el IF que pregunta una sola vez, el WHILE pregunta siempre. Nunca ejecuta una sentencia si es falsa. </p>
+    <p style="color: green;">let numero = 0<br>while (numero < 6){<br>numero++;<br>document.write(numero)<br>};</p>
+    <p style="color: red;">Resultado: 123456</p>
+<h4>Do While</h4>
+    <p>La condición se pregunta despúes.</p>
+    <p style="color: green;">let numero = 0<br>do{<br>document.write(numero);<br>numero++;<br>}<br>while (numero <=6)</p>
+    <p style="color: red;">Resultado: 0123456</p>
+<h4>Break</h4>
+    <p>Break termina la sentencia While.</p>
+    <p style="color: green;">let numero = 0<br> while(numero < 1000){<br>numero++;<br>document.write(numero);<br>if (numero == 14) {<br>break;<br>}<br>}</p>
+    <p style="color: red;">Resultado: 01234567891011121314</p>
+<h4>For</h4>
+    <p>Es igual que While, pero es un bucle determinado. Bucles como While o Do While, no le decimos cuantas vueltas van a dar.</p>
+    <p>FOR se compone de 3 partes: donde declaramos, donde las inicializamos y donde las iteramos (hacer lo mismo varias veces).</p>
+    <p style="color: green;">for (let i = 0; i < 6; i++){ ← Declarar variable e incialiazamos. Luego condición.</p>
+<h4>Continue</h4>
+    <p>Salteando un valor. No finaliza por completo el bucle, sino detiene esa iteración, pasando a la siguiente.</p>
+    <p style="color: green;">for (let i = 0; i < 20; i++){<br>if (i == 12){<br>continue;<br>} <br>document.write(i);<br>}</p>
+    <p style="color: red;">Resultado: 0 1 2 3 4 5 6 7 8 9 10 11 13 14 15 16 17 18 19 20 (Saltea nro 12)</p>
+<h4>For In</h4>
+    <p>Nos devuelve la posición en la que está los elementos.</p>
+    <p style="color: green;">let animales = ["gato","perro","tiranosaurio rex"];<br>for (animal in animales){<br>document.write(animal);<br>}</p>
+    <p style="color: red;">Resultado: 0 1 2</p>
+    <p style="color: green;">document.write(animales[animal]);</p>
+    <p style="color: red;">Resultado: gatoperrotiranosaurio rex</p>
+<h4>For Of</h4>
+    <p>Nos muestra el valor de los elementos.</p>
+    <p style="color: green;">let animales = ["gato","perro","tiranosaurio rex"];<br>for (animal of animales){<br>document.write(animal);<br>}</p>
+    <p style="color: red;">Resultado: gatoperrotiranosaurio rex</p>
+<h4>Label</h4>
+    <p>Sentencia que nos permite asocial cualquier bucle (excepto for ich) a un nombre para poder terminarlo cuando querramos.</p>
+    <img src="./Screen/label.jpg" width="300px">
+
+<h1>FUNCIONES</h1>
+    <p>Function: palabra para crear funciones. Al declarar una función, nos ahorramos de repetirla varias veces (Ahorramos código). Ejemplo</p>
+    <img src="./Screen/01funcion.png" width="300px">
+    <h4>Asignando en variables</h4>
+    <p>Otra forma de crear funciones es asignandolas en variables</p>
+    <p style="color: green;">= functionsaludar (){</p>
+    <h4>Return</h4>
+    <p>Sirve para devolvernos un valor, para que el bloque de código devuelva un tipo de dato. Finaliza la función (PARECIDO A BREAK).</p>
+    <p style="color: green;">function saludar (){<br>alert("Hola");<br>return "la función se ejecutó correctamente"<br>}</p>
+    <p style="color: green;">let saludo = saludar();<br>document.write(saludo)</p>
+    <h4>Parametros</h4>
+    <img src="./Screen/02funcion PARAMENTROS.png" width="300px">
+    <p>Otro ejemplo</p>
+    <img src="./Screen/03funcion PARAMENTROS.png" width="300px">
+    <p>Otra forma de usarlo es reemplazando el function por => (Función en flecha.)</p>
+    <img src="./Screen/04funcion PARAMENTROS.png" width="300px">
+    <h5>Ejercicio</h5>
+    <img src="./Screen/05funcion ejercicio.png" width="500px">
+
+<h1>POO</h1>
+    <img src="Screen/06POO.png" width="500px">
+    <h4>Metodos</h4>
+    <p>Son acciones que podemos hacer</p>
+    <img src="Screen/07POO metodo.png" width="500px">
+    <h4>Caracteristicas de POO</h4>    
+    <h5>Abstraccion</h5>
+    <p>Intentar reducir un objeto, hacer que sea lo menos complejo que podamos. Reducimos sus componentes básicos. Ej: perro: raza, color, tamaño</p>
+    <h5>Modularidad</h5>
+    <p>Capacidad de resolver un problema grande, separandolo por partes.</p>
+    <h5>Encapsulamiento</h5>
+    <p>Toda la data esté privada. Que el usuario no pueda acceder tan facil.</p>
+    <h5>Polimorfismo</h5>
+    <p>Capacidad que tiene un objeto de comportarse distinto por sus propiedades. Ver como un objeto se comporta de manera distinta ante el mismo método. Ej: animal > camina. Un perro camina de una forma, una gallina de otra, etc.</p>
+    <img src="Screen/08Polimorfismo.png" width="500px">
+    <h4>Herencia</h4>
+    <p>Es crear una clase que va a tomar todo lo que puede hacer la otra clase y sus propiedades, pero agregandole cosas nuevas.</p>
+    <img src="/Screen/09Herencia.png" width="500px">
+    <h4>Métodos estáticos</h4>
+    <p>Es un método que no necesita que la clase sea definida para ser creado.</p>
+    <img src="/Screen/10Metodoestatico .png" width="500px">
+    <h4>Métodos Accesores (Getters, Setters)</h4>
+    <p>Setters: Para modificar o definir un valor.</p>
+    <p>Getters: Sirve para obtener un valor.</p>
+    <img src="/Screen/11Get y set.png" width="400px">
+
+<h1>Métodos de Cadena</h1>
+    <h5>Concat</h5>
+    <p>Juntas dos o más cadenas y retorna una nueva.</p>
+    <img src="/Screen/12CONCAT.png" width="300px">
+    <h5>StartsWith</h5>
+    <p>Si una cadena comienza con los caracteres de otra cadena, devuelve true, sino devuelve false.</p>
+    <div class="container">
+    <img src="./Screen/12StartsWith false.png" width="350px">
+    <img src="./Screen/12StartsWith true.png" width="300px">
+    </div>
+    <h5>endsWith</h5>
+    <p>Si una cadena termina con los caracteres de otra cadena, devuelve true, sino devuelve false.</p>
+    <img src="./Screen/13endsWith true.png" width="300px">
+    <h5>Includes</h5>
+    <p>Si una cadena puede encontrarse dentro de otra cadena, devuelve true, sino devuelvev false.</p>
+    <img src="./Screen/14Includes.png" width="300px">
+    <h5>indexOf</h5>
+    <p>Igual que la anterior, pero devuelve el indice del primer caracter de la cadena, si no existe, devuelve -1</p>
+    <div class="container">
+    <img src="./Screen/15indexof.png" width="300px">
+    <img src="./Screen/15indexof 2.png" width="300px">
+    </div>
+    <h5>lastIndexOf</h5>
+    <p>Devueve el ultimo indice del primer caracter de la cadena, si no existe, devuelve -1.</p>
+    <img src="./Screen/16lastIndexof.png" width="300px">
+    <h5>padStart</h5>
+    <p>Propuesta de Estandar. Rellenar cadena al princio con los caracteres deseados.</p>
+    <img src="./Screen/17padstart.png" width="300px">
+    <h5>padEnd</h5>
+    <p>Propuesta de Estandar. Rellenar cadenas al final con los caracteres deseados.</p>
+    <h5>Repeat</h5>
+    <p>Devuelve la misma cadena pero repetida la cantidad que querramos. cadena.repeat(10)</p>
+    <h5>split</h5>
+    <p>Divide la cadena como le pidamos. Si escribimos cadena1.split("como"), lo eliminaria.</p>
+    <img src="./Screen/18split.png" width="300px">
+    <h5>substring (una sola palabra)</h5>
+    <p>Nos retorna un pedazo de la cadena que seleccionamos</p>
+    <img src="./Screen/19subtring.png" width="300px">
+    <h5>toLowerCase()</h5>
+    <p>Convierte una cadena a minúscula.</p>
+    <h5>toUpperCase()</h5>
+    <p>Convierte una cadena a mayúscula.</p>
+    <h5>toString</h5>
+    <p>Método devuelve una cadena que representa al objeto especificado.</p>
+    <h5>trim</h5>
+    <p>Elimina los espacios en blanco al principio y al final de una cadena.</p>
+    <h5>trimEnd y trimStart</h5>
+    <p>trimEnd: elimina los espacis en blanco al final de una cadedna</p>
+    <p>trimStart: elimina los espacios en blanco al comienzo de una cadena,</p>
+    <h5>valueOf</h5>
+    <p>retorna el valor primitivo de un objeto string.</p>
+    <h5>length</h5>
+    <p>Propiedad de una cadena, nos dice cuantos caracteres tiene. Ej: document.write(resultado.length);</p>
+
+<h1>Métodos de Arrays</h1>
+    <h5>Transformadores</h5>
+    <p>pop: elimina el útimo elemento de un array lo devuelve.</p>
+    <img src="./Screen/20pop.png" width="300px">
+    <p>shift: elimina el primer elemento de un array y lo devuelve.</p>
+    <p>push: agrega un elemento al array al final de la lista y devuelve la cantidad de elementos.</p>
+    <p>reverse: invierte el orden de los elemento de un array.</p>
+    <p>unshift: agrega uno a más elemento al inicio de un array, y devuelve la nueva longitud del array.</p>
+    <img src="./Screen/21unshift.png" width="400px">
+    <p>sort: ordena los elementos de un arreglo localmente y devuelve el arreglo ordenado.</p>
+    <p>splice: cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos. Si no quiero eliminar ninguno pongo 0. Si lo quiero agregar al final pongo -1 (FORMA DE REFERIRSE AL FINAL DE UN ARRAY)</p>
+    <img src="./Screen/22splice.png" width="450px">
+
+<h5>Accesores</h5>
+    <p>join: une todos los elementos de una matriz (u objeto similar) de una cadena y la devuelve. Atención: crea un nuevo array, guardarlo en let.</p>
+    <img src="./Screen/23join.png" width="450px">
+    <p>slice: devuelve una parte del array dentro de un nuevo array empezando por incio hasta fin (fin no incluido). 1°: a partir de que posición. 2°: cantidad que quiero que muestre.Si no ponemos ninguno, nos muestra todos los elementos.</p>
+    <img src="./Screen/24slice.png" width="400px">
+    <p>Metodos ya vistos: toString, indexOf, lastIndexOf, includes.</p>
+
+<h5>De Repeticion</h5>
+    <p>filter: crear un nuevo array con todos los elementos que cumplan la condición. Es una función.</p>
+    <div class="container">
+    <img src="./Screen/25filter.png" width="300px">
+    <img src="./Screen/25filter 2.png" width="300px">
+    </div>
+    <p>forEach: ejecuta la función indicada una vez por cada elemento del array.</p>
+
+<h5>Objeto Math</h5>
+<h6>Métodos</h6>
+    <p>sqrt(): devuelve la raiz cuadrada positiva de un número.</p>
+    <img src="./Screen/26cbrt.png" width="200px">
+    <p>cbrt(): devuelve la raíz cúbica de un número.</p>
+    <p>max(): devuelve el mayor de cero o más números. Ej: Math.max(4,1,25,547,17)</p>
+    <p>min(): devuelve el más pequeño de cero o más números.</p>
+    <p>random(): devuelve un número pseudo-aleatorio entre 0 y 1.</p>
+    <p>round(): devuelve el valor de un número redondeado al número</p>
+    <p>fround(): devuelve la representacón flotante de precisión simple más cercana de un número.</p>
+    <p>floor(): devuelve el mayor entero menor que o igual a un número. Ej: Math.floor(4.99999) = 4</p>
+    <img src="./Screen/27floor.png" width="200px">
+    <p>trunc(): devuelve la parte entera del numerp x, la eliminación de los dígitos. Parecido a round. Ej: Math.trunch(9,99)=10</p>
+
+<h5>Objeto Math</h5>
+<h6>Funcione de registro</h6>
+    <p>assert(): aparece un mensajede error en la consola si la afirmación es fala. Si la afirmación es verdadera, no aparecerá nada.</p>
+    <p>clear(): limpia la consola</p>
+    <p>error(): muestra un mensaje de error  en la Consola Web.</p>
+    <p>info(): emite un mensaje informativo a la Consola Web. En Firefox y Chrome, se muestra un pequeño icono "i" junto a estos elementos en el registro de la Consola Web.</p>
+    <p>log(): Muestra un mensaje en la consola web (o del intérprete JS).</p>
+    <p>table(): esta función tomo un argumento obligatorio: data, que debe ser un array o un objeto, y un parámetro adicional: columns y nos muestra una tabla en consola.</p>
+    <p>warn(): imprime un mensaje  de advertencia en la Consola Web.</p>
+    <p>dir(): despliega una lista interactiva de las propiedades del objeto JS especificado</p>
+
+
+<!-- aparte -->
+<p>¿Que item se relaciona con el concepto de Scope? Es el contexto actual de ejecución.</p>
+<p>¿Cuál es la forma correcta de escribir el arrow function de: function (a){ return a + 100;}? a=>a+100;</p>
+<p>Una función de callback es una función que se pasa a otra función como un argumento</p>
+<p>Crear un bucle que recorra cada elemento del array: <br> var frutas =["Manzana","Plátano";"Naranja"]; <br> for(_____){ <br> console.log(frutas[i]); <br> } <br> Puede ir: <br> a. i in frutas <br> b. i=0;i(< sin parentesis)3;++
+</body>
+</html>
