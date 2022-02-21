@@ -31,12 +31,16 @@ nav{
     font-family: 'Lexend', sans-serif;
     font-weight: 500;
 }
-.hero img{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
+.fondo{
+    background: url(img/1.jpg)  no-repeat center center;
+    background-size: cover;
 }
+.imgredonda{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+/* overflow: hidden; */
 .card-body{
     font-family: 'Lexend', sans-serif;
     background-color: #7766C6;
